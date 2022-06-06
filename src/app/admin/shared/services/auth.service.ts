@@ -5,6 +5,7 @@ import { IFireBaseRespons } from "src/app/interfaces/IFireBaseRespons";
 import { IUser } from "src/app/interfaces/IUser";
 import { environment } from "src/environments/environment";
 
+
 @Injectable()
 
 export class AuthService{
@@ -45,12 +46,16 @@ export class AuthService{
         switch(message){
             case 'EMAIL_NOT_FOUND':
                 this.error$.next('Email not found')
+                //this.error$.error('Email Email .dadadasd')
                 break
             case 'INVALID_PASSWORD':
                 this.error$.next('Invalid password')
+
+                //this.error$.error('Email Email .dadadasd')
                 break
             case 'INVALID_EMAIL':
                 this.error$.next('Invalid email')
+                //this.error$.error('Email Email .dadadasd')
                 break
         }
         

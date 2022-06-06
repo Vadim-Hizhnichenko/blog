@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import '~quill/dist/quill.core.css';
+@import '~quill/dist/quill.snow.css';
 :root {
     --primary-color: #9f35dc;
     --dark-color: #333333;
@@ -89,7 +91,7 @@ img {
 .btn {
     display: inline-block;
     background: var(--light-color);
-    color: rgb(136, 106, 106);
+    color: rgb(189, 162, 162);
     padding: 0.4rem 1.3rem;
     font-size: 1rem;
     border: none;

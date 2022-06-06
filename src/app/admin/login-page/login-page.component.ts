@@ -39,7 +39,8 @@ export class LoginPageComponent implements OnInit {
       this.form.reset()
       this.router.navigate(['/admin' , 'dashboard'])
       this.isSubmited = false
-    } )
+    }, () => {this.isSubmited = false}
+    )
 
   }
 
