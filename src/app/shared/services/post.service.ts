@@ -25,4 +25,16 @@ export class PostService{
         )
         
     }
+
+    getAllPosts(): Observable<IPost[]>{
+        return this.http.get(`${environment.fireBaseDbUrl}/posts.json`)
+        .pipe(map( (respons: {[key:string]: any}) => { 
+            return Object.keys(respons).map(key => ({
+                ...respons[key],
+                id: key,
+                date: new Date(respons[key].date)
+            }))
+            } 
+            ))
+    }
 }

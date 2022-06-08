@@ -6,7 +6,9 @@ import { IUser } from "src/app/interfaces/IUser";
 import { environment } from "src/environments/environment";
 
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+})
 
 export class AuthService{
 

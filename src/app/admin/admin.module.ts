@@ -36,7 +36,7 @@ import { AuthGuard } from "./shared/guards/auth.guard";
     ])
 ],
     exports:[RouterModule],
-    providers:[AuthService, AuthGuard]
+    providers:[AuthGuard]
     
 })
 
