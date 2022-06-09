@@ -7,9 +7,11 @@ import { DashboardPageComponent } from './dashboard-page/dashboard-page.componen
 import { CreatePageComponent } from './create-page/create-page.component';
 import { EditPageComponent } from './edit-page/edit-page.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { AuthService } from "./shared/services/auth.service";
+
 import { SharedModule } from "../shared/shared.module";
 import { AuthGuard } from "./shared/guards/auth.guard";
+import { SearchPostPipe } from "./shared/pipes/searchpost.pipe";
+
 
 
 @NgModule({
@@ -18,7 +20,8 @@ import { AuthGuard } from "./shared/guards/auth.guard";
         LoginPageComponent,
         DashboardPageComponent,
         CreatePageComponent,
-        EditPageComponent 
+        EditPageComponent,
+        SearchPostPipe
       ],
     imports:[
         CommonModule,

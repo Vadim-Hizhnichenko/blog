@@ -37,4 +37,24 @@ export class PostService{
             } 
             ))
     }
+
+    removePost(id: string):Observable<void>{
+        return this.http.delete<void>(`${environment.fireBaseDbUrl}/posts/${id}.json`)
+    }
+
+
+    getPostById(id: string): Observable<IPost>{
+        return this.http.get<IPost>(`${environment.fireBaseDbUrl}/posts/${id}.json`)
+        .pipe(
+            map( (post: IPost) => {
+                return {
+                    ...post, id, date: new Date(post.date)
+                } 
+            })
+        )   
+    }
+
+    update(post: IPost): Observable<IPost>{
+        return this.http.patch<IPost>(`${environment.fireBaseDbUrl}/posts/${post.id}.json`, post)
+    }
 }

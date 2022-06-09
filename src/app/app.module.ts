@@ -11,6 +11,12 @@ import { SharedModule } from './shared/shared.module';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterseptor } from './admin/shared/auth.interseptor';
 
+
+
+
+
+
+
 const INTERSEPTOR_AUTH: Provider = {
   provide: HTTP_INTERCEPTORS,
   multi: true,
